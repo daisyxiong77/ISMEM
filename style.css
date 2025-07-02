@@ -14,7 +14,7 @@ figcaption {
 }
 
 body {
-  background-color: orange;
+  background-color: orange !important;
 }
 
 h1 {
