@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url('images/background.jpg'); /* 设置背景图 */
+  background-image: url('images/background.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -38,4 +38,27 @@ h1 {
   max-width: 100%;
   border: 2px solid white;
   border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.image-item img:hover {
+  transform: scale(1.05);
+  cursor: zoom-in;
+}
+
+.download {
+  text-align: center;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.download a {
+  color: #ffff00;
+  font-weight: bold;
+  text-decoration: underline;
 }
