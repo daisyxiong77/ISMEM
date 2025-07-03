@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ISMEM</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>ISMEM: Intrinsic Semiparametric Mixed Effects Model</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>ISMEM</h1>
+    <h2>Intrinsic Semiparametric Mixed Effects Model for Longitudinal Manifold-valued Data</h2>
   </header>
 
   <main>
+    <section class="text-section">
+      <h3>Abstract</h3>
+      <p>
+        This paper introduces a novel intrinsic semiparametric mixed-effects model (ISMEM) to characterize the complex relationships between manifold-valued responses and Euclidean-valued covariates in the longitudinal setting.
+        Manifold-valued data, characterized by their inherent nonlinearity, high dimensionality, and specific geometric structures, present significant challenges for longitudinal analysis.
+        Most existing intrinsic models are developed for cross-sectional data and unsuited for longitudinal studies.
+        To address this limitation, we propose ISMEM, an efficient framework designed for longitudinal manifold-valued datasets that capture such relationships at both group and individual levels.
+      </p>
+      <p>
+        Key features of ISMEM include (i) the integration of fixed and random effects on Riemannian manifolds, enabling analysis at multiple levels; (ii) a semiparametric structure combining parametric and nonparametric components, enhancing both flexibility and interpretability; (iii) the preservation of the geometric properties of manifold-valued observations, offering improved robustness and interpretability compared to Euclidean-based models.
+      </p>
+      <p>
+        In addition, we develop a two-stage iterative estimation procedure and validate our approach through simulations on the symmetric positive definite (SPD) manifold.
+        Finally, we apply ISMEM to longitudinal data from the Alzheimer's Disease Neuroimaging Initiative (ADNI), reconstructing and comparing continuous 3D shape trajectories of the lateral ventricle in Kendall shape space across distinct groups.
+      </p>
+    </section>
+
+    <section class="text-section">
+      <h3>Real Data Analysis in Kendall Shape Space</h3>
+      <p>
+        Alzheimer's disease (AD) is a progressive neurodegenerative condition and a leading cause of dementia in the elderly. Structural MRI studies have shown that the lateral ventricle (LV), a subcortical structure, is a significant morphological marker of AD progression.
+      </p>
+      <p>
+        We utilized longitudinal T1-weighted MRI data from the ADNI-GO and ADNI2 phases of the Alzheimer's Disease Neuroimaging Initiative (ADNI), comprising 3685 scans from 1090 subjects. After preprocessing and segmentation of the left lateral ventricle (LLV), we performed surface reconstruction using area-preserving spherical mapping, then represented the surfaces via square-root normal fields (SRNF) and registered them to a global template.
+      </p>
+      <p>
+        Each registered surface was transformed into a point on the Kendall shape space by eliminating translation, scale, and rotation. This enables intrinsic statistical modeling on nonlinear manifolds. We applied the proposed ISMEM model to estimate group-level and subject-specific trajectories of LLV shape evolution.
+      </p>
+      <p>
+        Compared to existing methods like RNLMM and LESA, ISMEM showed better ability to capture local deformations and age-related changes, especially in critical anatomical regions. Additionally, multivariate modeling revealed that AD accelerates shape changes more distinctly in females aged 68–77 and in males aged 72–81, highlighting ISMEM's sensitivity to disease and demographic factors.
+      </p>
+    </section>
+
     <section class="image-gallery">
+      <h3>Experimental Figures</h3>
       <div class="image-item">
-        <a href="images/figure1.png" target="_blank">
-          <img src="images/figure1.png" alt="Figure 1">
+        <a href="images/fig1.png" target="_blank">
+          <img src="images/fig1.png" alt="Figure 1">
         </a>
-        <p>Figure 1: Description of figure 1.</p>
+        <p>Figure 1: LLV shape trajectory comparison between ISMEM, RNLMM, and LESA.</p>
       </div>
       <div class="image-item">
-        <a href="images/figure2.png" target="_blank">
-          <img src="images/figure2.png" alt="Figure 2">
+        <a href="images/fig2.png" target="_blank">
+          <img src="images/fig2.png" alt="Figure 2">
         </a>
-        <p>Figure 2: Description of figure 2.</p>
+        <p>Figure 2: 3D deformation field of LLV evolution.</p>
       </div>
     </section>
 
     <section class="download">
-      <p>
-        Download presentation:
-        <a href="files/ISMEM_summary.pptx" download>Click here to download the PPT</a>
-      </p>
+      <h3>Download</h3>
+      <a href="files/ISMEM_summary.pptx" download>Click here to download the ISMEM Summary PPT</a>
     </section>
   </main>
 </body>
