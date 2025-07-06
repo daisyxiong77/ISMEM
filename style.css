@@ -1,4 +1,4 @@
-/* 通用设置 */
+/* ===== 通用设置 ===== */
 body {
   margin: 0;
   padding: 0;
@@ -8,13 +8,13 @@ body {
   line-height: 1.7;
 }
 
-/* 页眉样式 */
+/* ===== 页眉样式 ===== */
 header {
   background-color: #002b36;
   color: white;
   text-align: center;
   padding: 40px 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -29,7 +29,7 @@ h2 {
   margin-top: 0;
 }
 
-/* 正文容器 */
+/* ===== 主体容器 ===== */
 main {
   max-width: 960px;
   margin: 0 auto;
@@ -37,12 +37,11 @@ main {
   background-color: white;
 }
 
-/* 正文文字块 */
+/* ===== 正文区块 ===== */
 .text-section {
   margin-bottom: 40px;
 }
 
-/* 小标题 */
 h3 {
   color: #004080;
   border-bottom: 1px solid #ddd;
@@ -50,7 +49,7 @@ h3 {
   margin-top: 40px;
 }
 
-/* 图片展示区域 */
+/* ===== 图片展示区域 ===== */
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -75,14 +74,25 @@ h3 {
   transform: scale(1.03);
 }
 
-/* 下载区域 */
+/* ===== 下载区域 ===== */
 .download {
   text-align: center;
   margin-top: 50px;
-  padding: 20px;
+  padding: 30px;
   background-color: #f3f3f3;
   border-radius: 10px;
   border: 1px solid #ddd;
+}
+
+/* 多个下载链接列表 */
+.download ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.download li {
+  margin: 12px 0;
 }
 
 .download a {
